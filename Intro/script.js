@@ -544,3 +544,55 @@ const friends = ["Aniekpeno", "Josiah", "Theresa"];
 console.log(friends);
 
 console.log(friends.length);
+
+const aboutPeterArr = [
+  "Peter",
+  "John",
+  27,
+  true,
+  ["Ruth", "Caleb", "Rose"],
+  "Akwa Ibom",
+  "male",
+];
+
+console.log(aboutPeterArr);
+
+const aboutPeterObj = {
+  firstName: "Peter",
+  lastName: "John",
+  age: 27,
+  hasDriverLicense: true,
+  friends: ["Ruth", "Caleb", "Rose"],
+  state: "Akwa Ibom",
+  gender: "Male",
+
+  calcAge(birthYear) {
+    const currentAge = 2025 - birthYear;
+    return currentAge;
+  },
+};
+
+console.log(aboutPeterObj);
+
+// Getting value out of an object
+console.log(aboutPeterObj.friends[1]);
+console.log(aboutPeterObj["friends"][1]);
+
+const age = aboutPeterObj.calcAge(1998);
+console.log(age);
+
+// This function caclAge
+const calcAge = function (birthYear) {
+  const currentAge = 2025 - birthYear;
+  return currentAge;
+};
+
+const ageMichael = calcAge(2000);
+console.log(ageMichael);
+
+//  1, Create an object that has properties of firstName, age, and course.
+// 2. Create a introMachine method, inside the method use the properties of the object to introduce yourself, and then return the value and call the method outside the object. Then log in to the console.
+
+// const number = [15, 14, ..]
+
+// 3. Create an number array from 15 to 1, the loop over the array to print a countdown from 1 to 15;
