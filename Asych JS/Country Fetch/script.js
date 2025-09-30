@@ -57,26 +57,26 @@ const displayCountry = function (data, neighbourClass) {
 
 /// Checking the country borders
 
-// const getCountry = function (country) {
-//   const request = fetch(`https://restcountries.com/v2/name/${country}`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data[0]);
+const getCountry = function (country) {
+  const request = fetch(`https://restcountries.com/v2/name/${country}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data[0]);
 
-//       displayCountry(data[0]);
-//       const neighbour = data[0].borders[0];
+      displayCountry(data[0]);
+      const neighbour = data[0].borders[0];
 
-//       console.log(neighbour);
+      console.log(neighbour);
 
-//       return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
-//     })
-//     .then((respnse) => respnse.json())
-//     .then((data) => {
-//       displayCountry(data, "neighbour");
-//     })
-//     .catch((error) => {
-//       displayError(error);
-//     });
-// };
+      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+    })
+    .then((respnse) => respnse.json())
+    .then((data) => {
+      displayCountry(data, "neighbour");
+    })
+    .catch((error) => {
+      displayError(error);
+    });
+};
 
 getCountry("usa");
